@@ -13,6 +13,8 @@ function pyenv {
         echo `ls $PYTHON_VIRTUALENV_BASEPATH`
     elif [ $1 == '--create' ]; then
         pushd $PYTHON_VIRTUALENV_BASEPATH; virtualenv --no-site-packages $2; popd;
+    elif [ $1 == '--create3' ]; then
+        pushd $PYTHON_VIRTUALENV_BASEPATH; virtualenv -p python3.6 --no-site-packages $2; popd;
     else
         source $PYTHON_VIRTUALENV_BASEPATH/$1/bin/activate;
     fi
