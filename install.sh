@@ -28,3 +28,8 @@ link_file $source $target
 cat submodules | perl -e 'while(<>){($a,$b) = split(/\s+/, $_); print `git submodule add $a $b`;}'
 
 git reset
+
+echo "\n*****************************************************************************************"
+echo "For tmux powerline on os X:\ngit clone https://github.com/powerline/fonts.git\ncd powerline/fonts\n./install.sh\n"
+echo "Then change font in terminal profile settings for non-ASCII characters to a powerline font (search 'powerline')"
+echo "\n*****************************************************************************************\n"
